@@ -112,43 +112,4 @@ add_test(
         ${CMAKE_SOURCE_DIR}/test-data/pal/ggv-mb-1khz
 )
 
-# Tests below require optional external dependencies:
-# - ldf-reader-full: requires ld-decode-testdata repository
-# - write-test-ldf-*: require ld-decode tool from main ld-decode repository
-# These tests are commented out as they require dependencies not included in this repo
-
-# add_test(
-#     NAME ldf-reader-full
-#     COMMAND ${SCRIPTS_DIR}/test-ldf-reader
-#         --build ${CMAKE_BINARY_DIR}
-#         --testdata ${TESTDATA_DIR}/ntsc
-#         --input ggv-ntsc-mb-v2800.ldf
-#         --full-sha256 0984ab9a4e66b49426b61e2d4de266e7783801dc48f566ed805257bc596098ec
-#         --offset 1000000
-#         --partial-bytes 1000000
-#         --partial-sha256 7dae0f342b4b365d5d607676961ca28b39ef78c71b7b0be11f77c303a7ac50f7
-# )
-
-# add_test(
-#     NAME write-test-ldf-ntsc
-#     COMMAND ${SCRIPTS_DIR}/test-write-test-ldf
-#         --build ${CMAKE_BINARY_DIR}
-#         --source ${CMAKE_SOURCE_DIR}
-#         --testdata ${TESTDATA_DIR}
-#         --input ggv-ntsc-mb-v2800.ldf
-#         --system ntsc
-#         --start 0
-#         --length 3
-# )
-
-# add_test(
-#     NAME write-test-ldf-pal
-#     COMMAND ${SCRIPTS_DIR}/test-write-test-ldf
-#         --build ${CMAKE_BINARY_DIR}
-#         --source ${CMAKE_SOURCE_DIR}
-#         --testdata ${TESTDATA_DIR}/pal
-#         --input jason-testpattern.ldf
-#         --system pal
-#         --start 0
-#         --length 2
-# )
+# End of LdDecodeTests.cmake
