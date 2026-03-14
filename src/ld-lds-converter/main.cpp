@@ -91,6 +91,7 @@ int main(int argc, char *argv[])
 
     // Standard logging options
     processStandardDebugOptions(parser);
+    emitDeprecatedToolWarning();
 
     // Get the configured settings from the parser
     bool isUnpacking = parser.isSet(showUnpackOption);

@@ -96,6 +96,7 @@ int main(int argc, char *argv[])
 
     // Standard logging options
     processStandardDebugOptions(parser);
+    emitDeprecatedToolWarning();
 
     // Get the options from the parser
     bool reverse = parser.isSet(setReverseOption);

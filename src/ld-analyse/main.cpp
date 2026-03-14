@@ -14,6 +14,8 @@
 #include <QtGlobal>
 #include <QCommandLineParser>
 #include <QLoggingCategory>
+#include <QMessageBox>
+#include <QTimer>
 
 #ifdef Q_OS_WIN
 #include <QSettings>
@@ -142,6 +144,7 @@ int main(int argc, char *argv[])
 
     // Standard logging options
     processStandardDebugOptions(parser);
+    emitDeprecatedToolWarning();
 
     // Check for theme override
     bool forceDarkTheme = parser.isSet("force-dark-theme");
@@ -174,6 +177,12 @@ int main(int argc, char *argv[])
     // Start the GUI application
     MainWindow w(inputFileName);
     w.show();
+    QTimer::singleShot(0, &w, [&w]() {
+        QMessageBox::warning(&w,
+                             QStringLiteral("Deprecated Tool"),
+                             deprecatedToolWarningMessage(),
+                             QMessageBox::Ok);
+    });
 
     return a.exec();
 }

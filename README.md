@@ -2,6 +2,9 @@
 
 This is the complete suite of tools for processing LaserDisc captures and TBC (Time Base Corrected) files. The ld-decode project provides professional-grade tools for digitizing, processing, and analyzing analog video sources with exceptional quality and accuracy.
 
+> [!IMPORTANT]  
+> ld-decode-tool is depreciated - please use the [decode-orc](https://github.com/simoninns/decode-orc) project instead.
+
 ## Tool Categories
 
 ### Core Processing Tools

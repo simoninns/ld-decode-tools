@@ -123,6 +123,7 @@ int main(int argc, char *argv[])
 
     // Standard logging options
     processStandardDebugOptions(parser);
+    emitDeprecatedToolWarning();
 
     VideoSystem system = PAL;
     QString systemName;

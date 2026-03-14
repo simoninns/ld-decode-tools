@@ -91,6 +91,7 @@ int main(int argc, char *argv[])
 
     // Standard logging options
     processStandardDebugOptions(parser);
+    emitDeprecatedToolWarning();
 
     // Check for frame data options
     bool showF1 = parser.isSet("show-f1");

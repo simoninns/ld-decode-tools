@@ -109,6 +109,7 @@ int main(int argc, char *argv[])
 
     // Standard logging options
     processStandardDebugOptions(parser);
+    emitDeprecatedToolWarning();
 
     // Check for output data type options
     bool outputWavMetadata = parser.isSet("audacity-labels");

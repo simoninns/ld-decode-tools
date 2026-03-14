@@ -292,6 +292,7 @@ int main(int argc, char *argv[])
 
     // Standard logging options
     processStandardDebugOptions(parser);
+    emitDeprecatedToolWarning();
 
     // Get the arguments from the parser
     QString inputFileName;

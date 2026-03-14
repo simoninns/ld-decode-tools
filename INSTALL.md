@@ -2,6 +2,9 @@
 
 This project ships a Nix flake that provides both a build and a development environment. The simplest way to install is with Nix flakes.
 
+> [!IMPORTANT]  
+> ld-decode-tool is depreciated - please use the [decode-orc](https://github.com/simoninns/decode-orc) project instead.
+
 ## Prerequisites
 
 - Nix with flakes enabled.
