@@ -77,6 +77,9 @@
             python3Packages.numpy
           ];
           EZPWD_DIR = "${ezpwdSrc}/c++";
+          shellHook = ''
+            export QT_PLUGIN_PATH=${pkgs.qt6.qtsvg}/lib/qt-6/plugins''${QT_PLUGIN_PATH:+:$QT_PLUGIN_PATH}
+          '';
         };
       }
     );

@@ -96,6 +96,9 @@ static const VideoSystemDefaults &getSystemDefaults(const LdDecodeMetaData::Vide
 // Return true and set system if found; if not found, return false.
 bool parseVideoSystemName(QString name, VideoSystem &system)
 {
+    // Accept "PAL-M" as an alias for "PAL_M"
+    if (name == "PAL-M") name = "PAL_M";
+
     // Search VIDEO_SYSTEM_DEFAULTS for a matching name
     for (const auto &defaults: VIDEO_SYSTEM_DEFAULTS) {
         if (name == defaults.name) {

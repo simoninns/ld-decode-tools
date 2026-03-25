@@ -40,7 +40,7 @@ target_include_directories(ld-analyse PRIVATE
 )
 
 target_link_libraries(ld-analyse PRIVATE
-    Qt::Core Qt::Gui Qt::Widgets
+    Qt::Core Qt::Gui Qt::Widgets Qt::Svg
     lddecode-library lddecode-chroma
 )
 
